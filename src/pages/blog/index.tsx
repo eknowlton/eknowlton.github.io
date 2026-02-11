@@ -89,7 +89,7 @@ export default function BlogIndex({
                         alt={post.frontmatter.title}
                         width={1200}
                         height={630}
-                        className="h-auto w-full"
+                        className="h-auto w-full brightness-100 transition dark:brightness-75 dark:contrast-110"
                       />
                     </div>
                   )}
@@ -126,16 +126,16 @@ export default function BlogIndex({
             {showPagination && (
               <nav className="mt-12 flex items-center justify-between text-sm">
                 <div>
-                  {currentPage > 1 ? (
+                  {currentPage < totalPages ? (
                     <Link
-                      href={currentPage === 2 ? "/blog" : `/blog/page/${currentPage - 1}`}
+                      href={`/blog/page/${currentPage + 1}`}
                       className="rounded-full border border-zinc-200 px-4 py-2 text-zinc-700 transition hover:border-zinc-300 hover:text-teal-600 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-teal-400"
                     >
-                      ← Newer posts
+                      ← Older posts
                     </Link>
                   ) : (
                     <span className="rounded-full border border-transparent px-4 py-2 text-zinc-400 dark:text-zinc-600">
-                      ← Newer posts
+                      ← Older posts
                     </span>
                   )}
                 </div>
@@ -143,16 +143,16 @@ export default function BlogIndex({
                   Page {currentPage} of {totalPages}
                 </span>
                 <div>
-                  {currentPage < totalPages ? (
+                  {currentPage > 1 ? (
                     <Link
-                      href={`/blog/page/${currentPage + 1}`}
+                      href={currentPage === 2 ? "/blog" : `/blog/page/${currentPage - 1}`}
                       className="rounded-full border border-zinc-200 px-4 py-2 text-zinc-700 transition hover:border-zinc-300 hover:text-teal-600 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:text-teal-400"
                     >
-                      Older posts →
+                      Newer posts →
                     </Link>
                   ) : (
                     <span className="rounded-full border border-transparent px-4 py-2 text-zinc-400 dark:text-zinc-600">
-                      Older posts →
+                      Newer posts →
                     </span>
                   )}
                 </div>

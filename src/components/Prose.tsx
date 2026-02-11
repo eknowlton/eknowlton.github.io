@@ -23,6 +23,7 @@ export function Prose({
         'dark:prose-pre:bg-zinc-950 dark:prose-pre:border-zinc-800/80',
         'prose-pre:overflow-x-auto',
         'prose-img:rounded-xl prose-img:border prose-img:border-zinc-200 dark:prose-img:border-zinc-800',
+        'prose-img:brightness-100 dark:prose-img:brightness-75 dark:prose-img:contrast-110',
         'prose-table:text-sm',
         'prose-th:border-b prose-th:border-zinc-200 prose-th:bg-zinc-50',
         'prose-td:border-b prose-td:border-zinc-100',

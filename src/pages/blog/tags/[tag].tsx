@@ -58,7 +58,7 @@ export default function BlogTagPage({
                         alt={post.frontmatter.title}
                         width={1200}
                         height={630}
-                        className="h-auto w-full"
+                        className="h-auto w-full brightness-100 transition dark:brightness-75 dark:contrast-110"
                       />
                     </div>
                   )}
