@@ -3,6 +3,7 @@ export type BlogFrontmatter = {
   date: string;
   description?: string;
   tags: string[];
+  image?: string;
 };
 
 export type BlogPost = {

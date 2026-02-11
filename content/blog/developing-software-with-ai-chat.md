@@ -6,9 +6,11 @@ tags:
   - AI
   - DX
   - Engineering
+image: "/blog/developing-software-with-ai-chat.svg"
 ---
-
 Over the last few months, AI chat has become part of my daily development loop. It’s not replacing design or architecture decisions, but it *is* accelerating the boring parts and tightening feedback. Here’s the workflow I’ve settled into.
+
+![AI chat workflow graphic](/blog/developing-software-with-ai-chat.svg)
 
 ## 1) Start with constraints, not features
 

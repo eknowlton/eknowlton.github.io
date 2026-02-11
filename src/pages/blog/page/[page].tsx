@@ -40,7 +40,7 @@ function TagPill({
   );
 }
 
-export default function BlogIndex({
+export default function BlogPage({
   posts,
   tags,
   recentPosts,
@@ -67,7 +67,7 @@ export default function BlogIndex({
   return (
     <>
       <Head>
-        <title>Blog - Ethan Knowlton</title>
+        <title>Blog - Page {currentPage} - Ethan Knowlton</title>
         <meta
           name="description"
           content="Notes on software engineering, security, and building products."
@@ -169,21 +169,46 @@ export default function BlogIndex({
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }: { params: { page: string } }) {
   const { getAllPosts, getAllTags } = await import("@/lib/blog.server");
   const allPosts = getAllPosts();
   const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
+  const currentPage = Number(params.page);
+
+  if (!Number.isFinite(currentPage) || currentPage < 2 || currentPage > totalPages) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const pagePosts = allPosts.slice(start, start + POSTS_PER_PAGE);
 
   return {
     props: {
-      posts: allPosts.slice(0, POSTS_PER_PAGE),
+      posts: pagePosts,
       tags: getAllTags(),
       recentPosts: allPosts.slice(0, 5).map((post) => ({
         slug: post.slug,
         title: post.frontmatter.title,
       })),
-      currentPage: 1,
+      currentPage,
       totalPages,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const { getAllPosts } = await import("@/lib/blog.server");
+  const allPosts = getAllPosts();
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
+
+  const paths = Array.from({ length: totalPages }, (_, index) => index + 1)
+    .filter((page) => page > 1)
+    .map((page) => ({ params: { page: String(page) } }));
+
+  return {
+    paths,
+    fallback: false,
   };
 }

@@ -26,6 +26,7 @@ function normalizeFrontmatter(data: Record<string, unknown>, slug: string): Blog
     date: typeof data.date === "string" ? data.date : "",
     description: typeof data.description === "string" ? data.description : undefined,
     tags: ensureArray(data.tags),
+    image: typeof data.image === "string" ? data.image : undefined,
   };
 }
 

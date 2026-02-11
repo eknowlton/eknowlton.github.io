@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 
 import { BlogSidebar } from "@/components/BlogSidebar";
@@ -20,7 +21,16 @@ export default function BlogTagPage({
   recentPosts,
 }: {
   tag: { label: string; slug: string };
-  posts: { slug: string; frontmatter: { title: string; date: string; description?: string; tags: string[] } }[];
+  posts: {
+    slug: string;
+    frontmatter: {
+      title: string;
+      date: string;
+      description?: string;
+      tags: string[];
+      image?: string;
+    };
+  }[];
   tags: { tag: string; count: number }[];
   recentPosts: { slug: string; title: string }[];
 }) {
@@ -41,6 +51,17 @@ export default function BlogTagPage({
             <div className="space-y-16">
               {posts.map((post) => (
                 <Card key={post.slug} className="group">
+                  {post.frontmatter.image && (
+                    <div className="mb-5 w-full overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+                      <Image
+                        src={post.frontmatter.image}
+                        alt={post.frontmatter.title}
+                        width={1200}
+                        height={630}
+                        className="h-auto w-full"
+                      />
+                    </div>
+                  )}
                   <Card.Title href={`/blog/${post.slug}`}>
                     {post.frontmatter.title}
                   </Card.Title>

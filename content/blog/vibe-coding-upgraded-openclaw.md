@@ -6,9 +6,11 @@ tags:
   - AI
   - Agents
   - Workflow
+image: "/blog/vibe-coding-upgraded-openclaw.svg"
 ---
-
 “Vibe coding” used to mean ad‑hoc prompts and hoping the output landed. That changed when I moved to a multi‑agent setup built around **OpenClaw**. The difference is less about raw speed and more about *stability*.
+
+![Multi-agent flow graphic](/blog/vibe-coding-upgraded-openclaw.svg)
 
 ## The shift: one brain → multiple roles
 
