@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from "@/components/SocialIcons";
-import portraitImage from "@/images/portrait.jpg";
+import portraitImage from "@/images/portrait-new.jpg";
 
 import gentuxLogo from "@/images/logos/generation-tux-logo.svg";
 import kimmelAssociatesLogo from "@/images/logos/kimmel-associates-logo.png";
