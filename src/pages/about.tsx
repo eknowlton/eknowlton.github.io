@@ -178,7 +178,7 @@ export default function Things() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Ethan Knowlton is a seasoned software engineer with over a
+                Ethan Knowlton is a seasoned engineer with over a
                 decade of experience in the technology industry. He is currently
                 working as a Principal Software Engineer at Generation Tux,
                 where he is responsible for developing and maintaining
