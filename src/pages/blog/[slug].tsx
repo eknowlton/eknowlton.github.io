@@ -21,19 +21,47 @@ export default function BlogPost({
 }: {
   post: {
     slug: string;
-    frontmatter: { title: string; date: string; description?: string; tags: string[] };
+    frontmatter: {
+      title: string;
+      date: string;
+      description?: string;
+      tags: string[];
+      image?: string;
+    };
     contentHtml: string;
   };
   tags: { tag: string; count: number }[];
   recentPosts: { slug: string; title: string }[];
 }) {
+  const siteUrl = "https://knowlton.dev";
+  const canonicalUrl = `${siteUrl}/blog/${post.slug}`;
+  const description =
+    post.frontmatter.description ??
+    "Notes on software engineering, security, and building products.";
+  const ogImage = `${siteUrl}${post.frontmatter.image ?? "/blog/vibe-coding-upgraded-openclaw.svg"}`;
+
   return (
     <>
       <Head>
         <title>{post.frontmatter.title} - Ethan Knowlton</title>
-        {post.frontmatter.description && (
-          <meta name="description" content={post.frontmatter.description} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Ethan Knowlton - Decade experience of Engineering" />
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.frontmatter.title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        {post.frontmatter.date && (
+          <meta property="article:published_time" content={post.frontmatter.date} />
         )}
+        {post.frontmatter.tags.map((tag) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
       </Head>
       <Container className="mt-16 sm:mt-32">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_20rem]">
