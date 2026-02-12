@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import { SimpleLayout } from '@/components/SimpleLayout'
+import Link from 'next/link'
 
 export default function Contact() {
   return (
@@ -14,6 +15,14 @@ export default function Contact() {
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
+                <div className="mt-3">
+                  <Link
+                    href="/projects"
+                    className="text-sm font-medium text-teal-600 hover:text-teal-500"
+                  >
+                    See recent development work →
+                  </Link>
+                </div>
                 <p className="text-xl leading-8 text-zinc-600 dark:text-zinc-200">
                   Web applications can be powerful tools for businesses to
                   streamline their operations, increase efficiency, and

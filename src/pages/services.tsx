@@ -27,8 +27,8 @@ export default function Uses() {
               <a
                 href="#"
                 className={`rounded-md hover:text-zinc-800 hover:dark:text-zinc-100 ${tab == "general"
-                    ? "bg-zinc-100 text-zinc-500 dark:bg-zinc-700 dark:text-zinc-300"
-                    : "text-zinc-400 dark:text-zinc-600"
+                  ? "bg-zinc-100 text-zinc-500 dark:bg-zinc-700 dark:text-zinc-300"
+                  : "text-zinc-400 dark:text-zinc-600"
                   } px-4 py-2 text-sm font-medium `}
                 aria-current="page"
                 onClick={(e) => {
@@ -41,8 +41,8 @@ export default function Uses() {
               <a
                 href="#"
                 className={`rounded-md hover:text-zinc-100 ${tab == "technical"
-                    ? "bg-zinc-100 text-zinc-500 dark:bg-zinc-700 dark:text-zinc-300"
-                    : "text-zinc-400 dark:text-zinc-600"
+                  ? "bg-zinc-100 text-zinc-500 dark:bg-zinc-700 dark:text-zinc-300"
+                  : "text-zinc-400 dark:text-zinc-600"
                   } px-4 py-2 text-sm font-medium  hover:text-zinc-700`}
                 onClick={(e) => {
                   e.preventDefault();
@@ -226,14 +226,6 @@ export default function Uses() {
                       it a fundamental pillar for successful software projects,
                       guiding their development, and safeguarding their
                       long-term success.
-                      <div className="mt-3">
-                        <Link
-                          href="/projects"
-                          className="text-sm font-medium text-teal-600 hover:text-teal-500"
-                        >
-                          View architecture case studies →
-                        </Link>
-                      </div>
                     </dd>
                   </div>
                   <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -300,14 +292,6 @@ export default function Uses() {
                       between complex backend functionalities and end-users,
                       making it a key driver of a product&apos;s success and
                       adoption in today&apos;s digital landscape.
-                      <div className="mt-3">
-                        <Link
-                          href="/projects"
-                          className="text-sm font-medium text-teal-600 hover:text-teal-500"
-                        >
-                          Explore frontend projects →
-                        </Link>
-                      </div>
                     </dd>
                   </div>
                 </dl>
@@ -339,14 +323,6 @@ export default function Uses() {
                       demands of dynamic, rapidly evolving IT landscapes, making
                       Kubernetes a linchpin for modernizing and future-proofing
                       infrastructure.
-                      <div className="mt-3">
-                        <Link
-                          href="/projects"
-                          className="text-sm font-medium text-teal-600 hover:text-teal-500"
-                        >
-                          View infrastructure projects →
-                        </Link>
-                      </div>
                     </dd>
                   </div>
                   <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -372,14 +348,6 @@ export default function Uses() {
                       reduce operational overhead, and enable innovation, making
                       them essential for staying competitive in today&apos;s
                       digital landscape.
-                      <div className="mt-3">
-                        <Link
-                          href="/projects"
-                          className="text-sm font-medium text-teal-600 hover:text-teal-500"
-                        >
-                          See cloud case studies →
-                        </Link>
-                      </div>
                     </dd>
                   </div>
                   <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -403,14 +371,6 @@ export default function Uses() {
                       application development, which aligns with modern software
                       development practices, making it an essential tool for
                       software companies and seamless developer integration.
-                      <div className="mt-3">
-                        <Link
-                          href="/projects"
-                          className="text-sm font-medium text-teal-600 hover:text-teal-500"
-                        >
-                          Browse containerized workflows →
-                        </Link>
-                      </div>
                     </dd>
                   </div>
                   <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

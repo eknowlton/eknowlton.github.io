@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import { SimpleLayout } from "@/components/SimpleLayout";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -19,6 +20,14 @@ export default function Contact() {
                   with their audiences in a number of ways. Here are some ways
                   mobile applications are changing business engagement:
                 </p>
+                <div className="mt-3">
+                  <Link
+                    href="/projects"
+                    className="text-sm font-medium text-teal-600 hover:text-teal-500"
+                  >
+                    See recent development work →
+                  </Link>
+                </div>
                 <div className="mt-10 max-w-xl text-base leading-7 text-zinc-700">
                   <ul className="m-2">
                     <li className="my-6 dark:text-zinc-300">
