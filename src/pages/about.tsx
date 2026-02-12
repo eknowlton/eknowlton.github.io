@@ -150,7 +150,7 @@ function Resume() {
   );
 }
 
-export default function About() {
+export default function Things() {
   return (
     <>
       <Head>
@@ -184,6 +184,14 @@ export default function About() {
                 where he is responsible for developing and maintaining
                 high-performance software solutions that meet the needs of the
                 industry along side a great team of developers.
+              </p>
+              <p>
+                Over the course of 15+ years, he has honed the ability to wear
+                many hats across the stack — from backend software engineering
+                and API design, to frontend product experiences, to
+                infrastructure/DevOps and cybersecurity engineering. That range
+                of experience allows him to zoom out for architecture and zoom
+                in for implementation details without losing the thread.
               </p>
               <p>
                 Ethan&apos;s expertise in software engineering has been honed
@@ -234,18 +242,11 @@ export default function About() {
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
-                href="mailto:ethan@knowlton.dev"
-                icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-              >
-                ethan@knowlton.dev
-              </SocialLink>
-              <SocialLink
-                href="mailto:ethan@watertowndev.com"
+                href="mailto:eknowlton@gmail.com"
                 icon={MailIcon}
                 className="mt-4"
               >
-                ethan@watertowndev.com
+                eknowlton@gmail.com
               </SocialLink>
             </ul>
             <Resume />
